@@ -4,11 +4,25 @@
 
 本文主要讲解的是这个问题，通过各种比较，最后给出技术栈升级的建议。
 
+![Java](Java.png)
+
 ## 看一下Java的前后端定位
 
 Java是传统的老牌后端，虽然它也可以jsp类的写点前端的东西，JavaEE里从model 1到model 2的差别就在于视图和控制器分离，引出jsp，再也不用servlet管全部了。
 
+model 1
+
+![1](1.png)
+
+model 2
+
+![2](2.png)
+
 一般我们把WebRoot目录下面的理解为是前端，非WebRoot理解成后端。
+
+烂大街的三大框架
+
+![3](3.png)
 
 这里又不是十分严格，比如后端给jsp传值，然后渲染，这时候前后端还是耦合在一起的，还不是严格意义上的前后端分离。
 
@@ -23,6 +37,8 @@ app拆分成了2部分
 
 - tomcat 1（端口8080） 部署后端api
 - tomcat 2（端口8081）  部署前端，jsp + ajax
+
+![4](4.png)
 
 这样就分开，但访问的时候可能会有跨域问题，于是我们还得把它们合并到一个域名里面，那就凑合nginx吧
 
@@ -56,6 +72,7 @@ app拆分成了2部分
 
 此时访问，所有的都放到http://127.0.0.1:80端口下面，是不是就完美解决了？
 
+![5](5.png)
 
 ## 前端优化
 
@@ -72,7 +89,6 @@ app拆分成了2部分
 ## 后端优化
 
 默认是使用json api风格
-
 
 ### API 标准写法
 
@@ -125,6 +141,8 @@ Doing this allows for client handler code to behave the same way for all API cal
 
 rpc框架，如dubbo，dubbo-x，motan，grpc等
 
+![6](6.png)
+
 ### rpc拆分后，拆分db
 
 一般拆分rpc都会按照某些业务主体划分，所以数据库是可以拆分出去
@@ -144,7 +162,11 @@ rpc框架，如dubbo，dubbo-x，motan，grpc等
 
 采用consul作为服务发现软件
 
+![7](7.png)
+
 ### 服务器监控apm
+
+![9](9.png)
 
 这是java写的
 
@@ -158,12 +180,14 @@ https://getkong.org/
 
 通过nginx + lua实现，提供插件机制，非常好用。
 
+![8](8.png)
+
 ### 容器化，自动化运维
+
+![10](10.png)
 
 - docker
 - saltstack
-
-![Java](Java.png)
 
 ## 看一下Node.js
 
