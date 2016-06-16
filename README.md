@@ -189,21 +189,31 @@ https://getkong.org/
 - docker
 - saltstack
 
+### 总结
+
+架构是相同的，其实语言是无所谓的。所以这套东西也适合Node.js哦。
+
 ## 看一下Node.js
 
 首先，Node.js是运行在v8之上的js 运行环境。语法上和js同出一辙，差别在于，它可以进行更多其他后端语言完成的功能，如io、网络等。
 
 一般，大前端指的是前端 + Node.js这样的组合，这时的Node.js仅作前端工具使用。
 
+![F0](f0.png)
+
 也就是说js才是混淆点
 
 - 前端有js
 - Node也是js语法
 
+![F1](f1.png)
+
 那再俗一点
 
 - 前端有js（Node.js作前端工具）
 - 后端 Node.js (express、koa等类似于javaEE的servlet)
+
+![F2](f2.png)
 
 这样是不是就清晰多了？
 
