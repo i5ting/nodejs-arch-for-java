@@ -243,7 +243,7 @@ java接口和jsp都是跑在tomcat这样的JavaEE服务器上的，而Node.js无
 
 ## Modern Web Development的四个维度
 
-![](web/img/overview.png)
+![](overview.png)
 
 ### 使用预编译
 
