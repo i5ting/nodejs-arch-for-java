@@ -242,7 +242,7 @@ java接口和jsp都是跑在tomcat这样的JavaEE服务器上的，而Node.js无
 
 这是比较常见，很多叫这种方位proxy，这里面设计的问题就很明显了，ajax能直接调用java api，还有复杂的业务是无法java接口直接搞定的呢？
 
-于是各种hack，比如采用https://github.com/request/request，但是这是http请求啊，http协议还是比较重的，每次请求至少50ms，如果多几个请求，就算加上缓存也是非常难受的，那么怎么办呢？
+于是各种hack，比如采用 https://github.com/request/request ，但是这是http请求啊，http协议还是比较重的，每次请求至少50ms，如果多几个请求，就算加上缓存也是非常难受的，那么怎么办呢？
 
 想想我们上面说的rpc吧，在express里不调用request，换成rpc是比较靠谱的，那么问题又来了，既要支持java又要支持node，rpc框架最好是支持多语言的，这时grpc就成了比较好的选择了，不然就一言不合自己写一个？哈哈
 
