@@ -231,7 +231,11 @@ java接口和jsp都是跑在tomcat这样的JavaEE服务器上的，而Node.js无
 
 这样对比的目的是为了让大家情况它们的差别。
 
+![B0](b0.png)
+
 下面我们就看一下，组合吧
+
+![B1](b1.png)
 
 - Java api 做后端
 - Node.js jade/ejs + ajax 作为前端（moa-frontend就是代表）
@@ -243,6 +247,8 @@ java接口和jsp都是跑在tomcat这样的JavaEE服务器上的，而Node.js无
 想想我们上面说的rpc吧，在express里不调用request，换成rpc是比较靠谱的，那么问题又来了，既要支持java又要支持node，rpc框架最好是支持多语言的，这时grpc就成了比较好的选择了，不然就一言不合自己写一个？哈哈
 
 下面来个不长见的技术栈
+
+![B2](b2.png)
 
 - jsp + ajax 作为前端
 - Node.js api 做后端
