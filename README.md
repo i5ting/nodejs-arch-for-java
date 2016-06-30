@@ -246,7 +246,7 @@ java接口和jsp都是跑在tomcat这样的JavaEE服务器上的，而Node.js无
 
 想想我们上面说的rpc吧，在express里不调用request，换成rpc是比较靠谱的，那么问题又来了，既要支持java又要支持node，rpc框架最好是支持多语言的，这时grpc就成了比较好的选择了，不然就一言不合自己写一个？哈哈
 
-下面来个不长见的技术栈
+下面来个不常见的技术栈
 
 ![B2](b2.png)
 
